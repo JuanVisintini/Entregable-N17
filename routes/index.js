@@ -1,6 +1,8 @@
 const epxress = require('express')
 const router = epxress.Router()
 const fs = require('fs')
+const { winstonRouter } = require("../winston/winstonLoger")
+const winston = require('../winston')
 
 const pathRouter = `${__dirname}`
 
@@ -17,9 +19,11 @@ fs.readdirSync(pathRouter).filter((file) => {
 	}
 })
 
-router.get('*', (req, res) => {
-	res.status(404)
-	res.send({ error: 'Not found' })
-})
+router.use((error, req, res, next) => {
+	winston.error(error.message)
+	res.status(500).send(error.message);
+});
+
+router.get('*', winstonRouter)
 
 module.exports = router

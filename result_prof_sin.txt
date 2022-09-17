@@ -1,0 +1,226 @@
+Statistical profiling result from prof_sin-v8.log, (5506 ticks, 3 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   4920   89.4%          C:\Windows\SYSTEM32\ntdll.dll
+    542    9.8%          C:\Program Files\nodejs\node.exe
+      2    0.0%          C:\Windows\System32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      4    0.1%    9.5%  LazyCompile: *parse C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:269:30
+      2    0.0%    4.8%  LazyCompile: *wrap C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      2    0.0%    4.8%  LazyCompile: *serializeInto C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\parser\serializer.js:553:23
+      2    0.0%    4.8%  LazyCompile: *resolve node:path:158:10
+      2    0.0%    4.8%  LazyCompile: *next C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:478:32
+      1    0.0%    2.4%  RegExp: ^(?:\{\{(~)?&)
+      1    0.0%    2.4%  RegExp: ^(?:\{\{(~)?![\s\S]*?\}\})
+      1    0.0%    2.4%  RegExp: ^(?:[^\x00]*?(?=(\{\{)))
+      1    0.0%    2.4%  RegExp: [&<>"'`=]
+      1    0.0%    2.4%  LazyCompile: *toNamespacedPath node:path:618:19
+      1    0.0%    2.4%  LazyCompile: *slowCases node:internal/util:165:19
+      1    0.0%    2.4%  LazyCompile: *readFile node:fs:373:18
+      1    0.0%    2.4%  LazyCompile: *parse C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\minimatch\minimatch.js:413:9
+      1    0.0%    2.4%  LazyCompile: *fromOptions C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\write_concern.js:40:23
+      1    0.0%    2.4%  LazyCompile: *concat node:buffer:536:32
+      1    0.0%    2.4%  LazyCompile: *command C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\connection.js:251:12
+      1    0.0%    2.4%  LazyCompile: *anonymous C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:12:42
+      1    0.0%    2.4%  LazyCompile: *adjustOffset node:buffer:1099:22
+      1    0.0%    2.4%  LazyCompile: *addListener node:events:618:58
+      1    0.0%    2.4%  LazyCompile: *__awaiter C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express-handlebars\dist\express-handlebars.js:18:54
+      1    0.0%    2.4%  LazyCompile: *Readable.read node:internal/streams/readable:394:35
+      1    0.0%    2.4%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:583:37
+      1    0.0%    2.4%  LazyCompile: *Hash node:internal/crypto/hash:58:14
+      1    0.0%    2.4%  LazyCompile: *<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\source-map\lib\source-node.js:174:29
+      1    0.0%    2.4%  Function: ^toString C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\utils.js:922:13
+      1    0.0%    2.4%  Function: ^onResponseHeaders C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\compression\index.js:140:47
+      1    0.0%    2.4%  Function: ^onMessage C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\connection.js:156:14
+      1    0.0%    2.4%  Function: ^noop node:internal/util/debuglog:47:14
+      1    0.0%    2.4%  Function: ^makeFindCommand C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\operations\find.js:55:25
+      1    0.0%    2.4%  Function: ^adjustOffset node:buffer:1099:22
+      1    0.0%    2.4%  Function: ^_write node:internal/streams/writable:283:16
+      1    0.0%    2.4%  Function: ^<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\connection.js:60:44
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     39    0.7%   92.9%  JavaScript
+      0    0.0%    0.0%  C++
+     40    0.7%   95.2%  GC
+   5464   99.2%          Shared libraries
+      3    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   4920   89.4%  C:\Windows\SYSTEM32\ntdll.dll
+
+    542    9.8%  C:\Program Files\nodejs\node.exe
+    264   48.7%    C:\Program Files\nodejs\node.exe
+     25    9.5%      Function: ^compileFunction node:vm:308:25
+     25  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     25  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     25  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     19    7.2%      Function: ^realpathSync node:fs:2425:22
+     19  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+     19  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+     11   57.9%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      6   31.6%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      2   10.5%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+     14    5.3%      C:\Program Files\nodejs\node.exe
+      2   14.3%        Function: ^FastBuffer node:internal/buffer:958:14
+      1   50.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1  100.0%            Function: ^allocUnsafeSlow node:buffer:383:50
+      1   50.0%          Function: ^alloc node:buffer:360:30
+      1  100.0%            Function: ^serialize C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\bson.js:110:19
+      1    7.1%        LazyCompile: ~next C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:478:32
+      1  100.0%          LazyCompile: ~lex C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:525:30
+      1  100.0%            LazyCompile: ~lex C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:295:25
+      1    7.1%        LazyCompile: ~get C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\@faker-js\faker\dist\cjs\locales\ar\address\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\@faker-js\faker\dist\cjs\locales\ar\address\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    7.1%        LazyCompile: ~f C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\@faker-js\faker\dist\cjs\locales\en_CA\internet\index.js:1:259
+      1  100.0%          LazyCompile: ~m C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\@faker-js\faker\dist\cjs\locales\en_CA\internet\index.js:1:432
+      1  100.0%            Function: ~<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\@faker-js\faker\dist\cjs\locales\en_CA\internet\index.js:1:1
+      1    7.1%        LazyCompile: ~Kareem.filter C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\kareem\index.js:380:35
+      1  100.0%          LazyCompile: ~applyQueryMiddleware C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongoose\lib\helpers\query\applyQueryMiddleware.js:26:30
+      1  100.0%            LazyCompile: ~compile C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongoose\lib\model.js:4898:33
+      1    7.1%        LazyCompile: *readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1    7.1%        LazyCompile: *parse C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\minimatch\minimatch.js:413:9
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            Function: ^<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\minimatch\minimatch.js:222:19
+      1    7.1%        LazyCompile: *makeAbs C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\common.js:203:18
+      1  100.0%          Function: ^Glob._makeAbs C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:255:36
+      1  100.0%            Function: ^Glob._emitMatch C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:454:38
+      1    7.1%        LazyCompile: *compile C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:73:28
+      1  100.0%          LazyCompile: *<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express-handlebars\dist\express-handlebars.js:227:47
+      1  100.0%            LazyCompile: *step C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express-handlebars\dist\express-handlebars.js:31:18
+      1    7.1%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    7.1%        Function: ^pipe C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\send\index.js:506:43
+      1  100.0%          Function: ^serveStatic C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\serve-static\index.js:72:31
+      1  100.0%            LazyCompile: *trim_prefix C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:293:23
+      1    7.1%        Function: ^command C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\connection.js:251:12
+      1  100.0%          Function: ^<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\sdam\server.js:204:42
+      1  100.0%            Function: ^<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\connection_pool.js:291:23
+      1    7.1%        Function: ^<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express-handlebars\dist\express-handlebars.js:164:57
+      1  100.0%          Function: ^<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express-handlebars\dist\express-handlebars.js:20:46
+      1  100.0%            C:\Program Files\nodejs\node.exe
+     10    3.8%      Function: ^statSync node:fs:1543:18
+     10  100.0%        Function: ^tryStat C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\view.js:174:17
+     10  100.0%          Function: ^resolve C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\view.js:146:42
+     10  100.0%            Function: ^lookup C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\view.js:104:40
+      8    3.0%      LazyCompile: *next C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:478:32
+      7   87.5%        LazyCompile: *parse C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:269:30
+      5   71.4%          Function: ^parseWithoutProcessing C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:33:32
+      5  100.0%            Function: ^parse C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:51:15
+      2   28.6%          LazyCompile: *<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express-handlebars\dist\express-handlebars.js:227:47
+      2  100.0%            LazyCompile: *step C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express-handlebars\dist\express-handlebars.js:31:18
+      1   12.5%        Function: ^lex C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:525:30
+      1  100.0%          Function: ^lex C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:295:25
+      1  100.0%            Function: ^parse C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:269:30
+      6    2.3%      Function: ^stat node:internal/modules/cjs/loader:151:14
+      3   50.0%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      3  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      3  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      3   50.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      2   66.7%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   33.3%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      4    1.5%      LazyCompile: *resolve node:path:158:10
+      1   25.0%        LazyCompile: *toNamespacedPath node:path:618:19
+      1  100.0%          Function: ^statSync node:fs:1543:18
+      1  100.0%            Function: ^tryStat C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\view.js:174:17
+      1   25.0%        LazyCompile: *stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1   25.0%        LazyCompile: *makeAbs C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\common.js:203:18
+      1  100.0%          Function: ^Glob._makeAbs C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:255:36
+      1  100.0%            Function: ^Glob._emitMatch C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:454:38
+      1   25.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      4    1.5%      Function: ^readSync node:fs:684:18
+      3   75.0%        Function: ^tryReadSync node:fs:429:21
+      3  100.0%          Function: ^readFileSync node:fs:450:22
+      3  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1   25.0%        LazyCompile: *readFileSync node:fs:450:22
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      3    1.1%      LazyCompile: *serializeInto C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\parser\serializer.js:553:23
+      1   33.3%        LazyCompile: *serializeObject C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\parser\serializer.js:260:25
+      1  100.0%          LazyCompile: *serializeInto C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\parser\serializer.js:553:23
+      1  100.0%            LazyCompile: *serializeObject C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\parser\serializer.js:260:25
+      1   33.3%        LazyCompile: *serialize C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\bson.js:110:19
+      1  100.0%          Function: ^serializeBson C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\commands.js:379:18
+      1  100.0%            Function: ^makeDocumentSegment C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\commands.js:371:24
+      1   33.3%        Function: ^serialize C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\node_modules\bson\lib\bson.js:110:19
+      1  100.0%          Function: ^serializeBson C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\commands.js:379:18
+      1  100.0%            Function: ^makeDocumentSegment C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\mongodb\lib\cmap\commands.js:371:24
+      3    1.1%      LazyCompile: *next C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:177:16
+      2   66.7%        LazyCompile: *handle C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:136:31
+      2  100.0%          Function: ^router C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:46:18
+      2  100.0%            LazyCompile: *trim_prefix C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:293:23
+      1   33.3%        Function: ^jsonParser C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\body-parser\lib\types\json.js:98:30
+      1  100.0%          LazyCompile: *trim_prefix C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:293:23
+      1  100.0%            LazyCompile: *next C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:177:16
+      3    1.1%      LazyCompile: *SourceNode_walk C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\source-map\lib\source-node.js:221:53
+      3  100.0%        LazyCompile: *SourceNode_walk C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\source-map\lib\source-node.js:221:53
+      3  100.0%          LazyCompile: *SourceNode_walk C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\source-map\lib\source-node.js:221:53
+      2   66.7%            Function: ^SourceNode_toString C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\source-map\lib\source-node.js:318:61
+      1   33.3%            LazyCompile: *SourceNode_walk C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\source-map\lib\source-node.js:221:53
+      3    1.1%      LazyCompile: *SourceNode_add C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\source-map\lib\source-node.js:172:51
+      3  100.0%        LazyCompile: *wrap C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\code-gen.js:101:22
+      2   66.7%          LazyCompile: *replaceStack C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:892:38
+      2  100.0%            Function: ^resolvePath C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:492:36
+      1   33.3%          LazyCompile: *resolvePath C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:492:36
+      1  100.0%            Function: ^lookupOnContext C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:448:44
+      3    1.1%      Function: ^readdir node:fs:1368:17
+      3  100.0%        Function: ^Glob._readdir C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:525:36
+      2   66.7%          Function: ^Glob._processGlobStar C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:623:44
+      2  100.0%            Function: ^Glob._process C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:295:36
+      1   33.3%          Function: ^Glob._readdirInGlobStar C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:492:46
+      1  100.0%            LazyCompile: *Glob._processReaddir C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\glob\glob.js:368:43
+      3    1.1%      Function: ^cookieParser C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\cookie-parser\index.js:44:32
+      3  100.0%        LazyCompile: *trim_prefix C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:293:23
+      3  100.0%          LazyCompile: *next C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:177:16
+      3  100.0%            Function: ^error C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\serve-static\index.js:115:39
+      3    1.1%      Function: ^compression C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\compression\index.js:59:31
+      2   66.7%        LazyCompile: *trim_prefix C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:293:23
+      2  100.0%          LazyCompile: *next C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:177:16
+      2  100.0%            Function: ^cookieParser C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\cookie-parser\index.js:44:32
+      1   33.3%        Function: ^handle C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ^trim_prefix C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:293:23
+      1  100.0%            Function: ^<anonymous> C:\Users\juanv\Desktop\Entregables\Entregable-N17\node_modules\express\lib\router\index.js:280:64
+      3    1.1%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2   66.7%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1   50.0%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      1  100.0%            LazyCompile: ~get node:crypto:287:8
+      1   50.0%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   33.3%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+     25    4.6%    LazyCompile: *compileFunction node:vm:308:25
+     25  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     14   56.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+     14  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     11   78.6%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      3   21.4%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     11   44.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     11  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      9   81.8%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      2   18.2%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+

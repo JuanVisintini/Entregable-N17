@@ -15,7 +15,10 @@ const info = (_, res) => {
     }
 
     informacion.keys = Object.keys(informacion.args)
-    //console.log({ informacion: informacion })
+    //   for (let i = 0; i < 100; i++) {
+
+    //  console.log(i);
+//   }
     res.render('info', { informacion: informacion })
 }
 
